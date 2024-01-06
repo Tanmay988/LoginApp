@@ -1,0 +1,128 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Latest compiled JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </head>
+  <body>
+
+    {{! navbar code }}
+    {{>navbar}}
+
+    {{! formcode }}
+    <div class="container-fluid m-5 ">
+      <div class="row ">
+        <div class="col-12 col-md-6 mx-auto bg-light p-3">
+            <h3 class="text-center">Login Form</h3>
+          <form action="/register" method="POST">
+            <div class="mb-3">
+              <label for="firstname" class="form-label">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstname"
+                name="FirstName"
+              />
+              <label for="lastName" class="form-label">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                name="LastName"
+              />
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                name="email"
+              />
+              <label for="phoneNumber" class="form-label">Phone Number</label>
+              <input
+                type="text"
+                class="form-control"
+                id="phoneNumber"
+                name="phoneNo"
+              />
+              <label for="age" class="form-label">Age</label>
+              <input type="number" class="form-control" id="age" name="age" />
+              <div class="form-check mb-3 mt-3">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Gender"
+                  id="flexRadioDefault1"
+                  value="Male"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Male
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Gender"
+                  id="flexRadioDefault2"
+                  value="Female"
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Female
+                </label>
+              </div>
+
+            </div>
+            <div class="mb-3">
+              <label
+                for="exampleInputPassword1"
+                class="form-label"
+              >Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                name="password"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="confirmPassword" class="form-label">Confirm Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="confirmPassword"
+                name="confirmPassword"
+              />
+            </div>
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+                name="exampleCheck1"
+              />
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <div class="text-center">
+            <button type="submit" value="Register" class="btn btn-primary ">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    {{! footer code }}
+    {{>footer}}
+
+  </body>
+</html>
